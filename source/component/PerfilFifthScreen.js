@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     color: '#204559',
-    fontSize: 25,
+    fontSize: 22,
     fontWeight: 'bold',
     marginBottom: '3%'
   },
