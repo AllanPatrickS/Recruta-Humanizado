@@ -13,7 +13,7 @@ export default class LoginScreen extends Component {
           </View>
 
           <View style={{ marginBottom: '20%' }}>
-            <Text style={styles.bottomText}>Todas as oportunidades foram selecionadas no seu perfil. Lembre-se que você sempre pode editar as suas preferências em Meu Perfil.</Text>
+            <Text style={styles.bottomText}>Todas as oportunidades foram selecionadas baseadas no seu perfil. Lembre-se que você sempre pode editar as suas preferências em Meu Perfil.</Text>
           </View>
 
           <TouchableHighlight

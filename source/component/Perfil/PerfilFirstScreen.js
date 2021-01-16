@@ -49,7 +49,7 @@ export default class PerfilFirstScreen extends Component {
             underlayColor={'#4460F1'}
             onPress={() => console.log('click')}
           >
-            <Text style={styles.continueButtonText}>Continuar</Text>
+            <Text style={styles.nextButtonText}>Continuar</Text>
           </TouchableHighlight>
 
           <View style={{alignSelf: 'center'}}>
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     paddingVertical: '4%',
     marginBottom: '10%'
   },
-  continueButtonText: {
+  nextButtonText: {
     color: '#ffffff',
     alignSelf: 'center',
     fontSize: 17
