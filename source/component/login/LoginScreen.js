@@ -25,7 +25,10 @@ export default function FirstScreen({ navigation }) {
   return (
     <View style={styles.background}>
       <View style={styles.screen}>
-        <Image style={styles.logo}/>
+        <Image 
+          style={styles.logo}
+          source={require('../../assets/Logo1.png')}
+        />
         <Text style={styles.titleText}>Opa, tudo bem?</Text>
         <Text style={[styles.commomText, { marginBottom: '8%' }]}>Parece que essa é a primeira vez por aqui no Recruta humanizado.</Text>
         <Text style={[styles.commomText, { marginBottom: '6%' }]}>Vamos começar?</Text>
@@ -110,7 +113,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     height: 100,
     width: 100,
-    backgroundColor: 'blue',
     marginBottom: '5%'
   },
   titleText: {

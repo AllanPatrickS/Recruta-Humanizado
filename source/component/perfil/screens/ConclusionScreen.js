@@ -7,8 +7,10 @@ export default class LoginScreen extends Component {
       <View style={styles.background}>
         <View style={styles.screen}>
           <View style={{ marginBottom: '15%' }}>
-            <View style={styles.logo}></View>
-            <Image></Image>
+            <Image
+              style={styles.logo}
+              source={require('../../../assets/Logo1.png')}
+            />
             <Text style={styles.titleText}>Você já pode explorar a nossa lista de oportunidades</Text>
           </View>
 
@@ -54,7 +56,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     height: 100,
     width: 100,
-    backgroundColor: 'blue',
     marginBottom: '5%'
   },
   titleText: {

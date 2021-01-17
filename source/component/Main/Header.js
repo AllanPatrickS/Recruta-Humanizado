@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import { View, TouchableHighlight, StyleSheet } from 'react-native';
+import { View, TouchableHighlight, Image, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default class Header extends Component {
   render() {
     return (
       <View style={styles.header}>
-        <View style={styles.logo}></View>
+        <Image
+          style={styles.logo}
+          source={require('../../assets/Logo1.png')}
+        />
         <TouchableHighlight
           underlayColor={'#ffffff'}
           onPress={() => console.log('click')}
@@ -31,7 +34,6 @@ const styles = StyleSheet.create({
   logo: {
     height: 50,
     width: 50,
-    backgroundColor: 'blue',
     marginBottom: '5%'
   },
 })

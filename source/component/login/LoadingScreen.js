@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { View, Image, Text, StyleSheet } from 'react-native';
 import { ActivityIndicator } from 'react-native-paper';
 
@@ -13,7 +13,10 @@ export default function LoginScreen({ navigation }) {
   return (
     <View style={styles.background}>
       <View style={styles.screen}>
-        <Image style={styles.logo}></Image>
+        <Image
+          style={styles.logo}
+          source={require('../../assets/Logo1.png')}
+        />
         <Text style={styles.titleText}>Recruta Humanizado</Text>
         <ActivityIndicator size={'large'} animating={true} color={'#4460F1'} />
         <Text style={styles.commomText}>Carregando</Text>
@@ -38,7 +41,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     height: 100,
     width: 100,
-    backgroundColor: 'blue',
     marginBottom: '5%'
   },
   titleText: {
