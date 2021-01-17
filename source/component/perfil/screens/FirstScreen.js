@@ -1,64 +1,59 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableHighlight } from 'react-native';
 
-export default class PerfilFirstScreen extends Component {
-  render() {
-    return (
-      <View style={styles.background}>
-        <View style={styles.screen}>
-          <View style={styles.space}>
-            <Text style={styles.titleText}>Como você se chama?</Text>
-            <TextInput
-              style={styles.box}
-              placeholder={'Digite o seu nome e sobrenome'}
-              placeholderTextColor='#4460F1'
-            />
-          </View>
+export default function PerfilFirstScreen() {
+  const [date, setDate] = useState(new Date());
+  const [name, setName] = useState('');
+  const [birth, setBirth] = useState('');
 
-          <View style={styles.space}>
-            <Text style={styles.titleText}>Data de nascimento</Text>
-            <TextInput
-              style={styles.box}
-              placeholder={'Dia/Mês/Ano'}
-              placeholderTextColor='#4460F1'
-            />
-          </View>
+  return (
+    <View style={styles.background} >
+      <View style={styles.screen}>
 
-          <View style={styles.space}>
-            <Text style={styles.titleText}>Gênero*</Text>
-            <TextInput
-              style={styles.box}
-              placeholder={'Dia/Mês/Ano'}
-              placeholderTextColor='#4460F1'
-            />
-          </View>
+        <Text style={styles.titleText}>Como você se chama?</Text>
+        <TextInput
+          style={[styles.box, { marginBottom: '5%' }]}
+          placeholder={'Digite o seu nome e sobrenome'}
+          placeholderTextColor='#4460F1'
+          onChangeText={text => setName(text)}
+          value={name}
+        />
 
-          <View style={styles.space}>
-            <Text style={styles.titleText}>Eu me identifico como*</Text>
-            <TextInput
-              style={styles.box}
-              placeholder={'Dia/Mês/Ano'}
-              placeholderTextColor='#4460F1'
-            />
-          </View>
+        <Text style={styles.titleText}>Data de nascimento</Text>
+        <TextInput
+          style={[styles.box, { marginBottom: '5%' }]}
+          placeholder={'Dia/Mês/Ano'}
+          placeholderTextColor='#4460F1'
+          value={birth}
+          editable={false}
+        />
 
-          <Text style={styles.bottomText}>*Utilizamos esses dados para entender melhor o nosso público e para melhorar a sua experiência. Nenhum dado é exposto sem sua autorização.</Text>
+        <Text style={styles.titleText}>Gênero*</Text>
+        <TextInput
+          style={[styles.box, { marginBottom: '5%' }]}
+          placeholder={'Dia/Mês/Ano'}
+          placeholderTextColor='#4460F1'
+        />
 
-          <TouchableHighlight
-            style={styles.nextButton}
-            underlayColor={'#4460F1'}
-            onPress={() => console.log('click')}
-          >
-            <Text style={styles.nextButtonText}>Continuar</Text>
-          </TouchableHighlight>
+        <Text style={styles.titleText}>Eu me identifico como*</Text>
+        <TextInput
+          style={[styles.box, { marginBottom: '5%' }]}
+          placeholder={'Dia/Mês/Ano'}
+          placeholderTextColor='#4460F1'
+        />
 
-          <View style={{alignSelf: 'center'}}>
-            <Text>Carrossel</Text>
-          </View>
-        </View>
+        <Text style={styles.bottomText}>*Utilizamos esses dados para entender melhor o nosso público e para melhorar a sua experiência. Nenhum dado é exposto sem sua autorização.</Text>
+
+        <TouchableHighlight
+          style={styles.nextButton}
+          underlayColor={'#4460F1'}
+          onPress={() => console.log('click')}
+        >
+          <Text style={styles.nextButtonText}>Continuar</Text>
+        </TouchableHighlight>
       </View>
-    );
-  }
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -68,7 +63,7 @@ const styles = StyleSheet.create({
   },
   screen: {
     flexDirection: 'column',
-    marginTop: '20%',
+    marginTop: '10%',
     marginHorizontal: '11%'
   },
   space: {

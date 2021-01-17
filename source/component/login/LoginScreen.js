@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
   },
   screen: {
     flexDirection: 'column',
-    marginTop: '20%',
+    marginTop: '10%',
     marginHorizontal: '11%'
   },
   logo: {

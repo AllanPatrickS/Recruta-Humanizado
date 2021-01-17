@@ -6,7 +6,7 @@ export default function LoginScreen({ navigation }) {
 
   useEffect(() => {
     setTimeout(function () {
-      navigation.navigate('PerfilFirstScreen');
+      navigation.navigate('PerfilScreen');
     }.bind(this), 3000);
   });
 
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   screen: {
     flexDirection: 'column',
     alignItems: 'center',
-    marginTop: '45%',
+    marginTop: '30%',
     marginHorizontal: '15%'
   },
   logo: {

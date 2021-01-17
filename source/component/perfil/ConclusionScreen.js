@@ -9,7 +9,7 @@ export default class LoginScreen extends Component {
           <View style={{ marginBottom: '15%' }}>
             <Image
               style={styles.logo}
-              source={require('../../../assets/Logo1.png')}
+              source={require('../../assets/Logo1.png')}
             />
             <Text style={styles.titleText}>Você já pode explorar a nossa lista de oportunidades</Text>
           </View>

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableHighlight } from 'react-native';
 
-export default class PerfilThirdScreen extends Component {
-  render() {
+export default function PerfilThirdScreen() {
     return (
       <View style={styles.background}>
         <View style={styles.screen}>
@@ -138,15 +137,9 @@ export default class PerfilThirdScreen extends Component {
               <Text style={styles.continueButtonText}>Continuar</Text>
             </TouchableHighlight>
           </View>
-
-          <View style={{ alignSelf: 'center' }}>
-            <Text>Carrossel</Text>
-          </View>
-
         </View>
       </View>
     );
-  }
 }
 
 const styles = StyleSheet.create({
@@ -156,7 +149,7 @@ const styles = StyleSheet.create({
   },
   screen: {
     flexDirection: 'column',
-    marginTop: '20%',
+    marginTop: '10%',
     marginHorizontal: '11%'
   },
   space: {

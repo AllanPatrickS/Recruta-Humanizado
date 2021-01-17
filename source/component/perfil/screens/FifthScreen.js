@@ -1,167 +1,160 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableHighlight } from 'react-native';
 
-export default class PerfilFifthScreen extends Component {
-  render() {
-    return (
-      <View style={styles.background}>
-        <View style={styles.screen}>
-          <View style={styles.space}>
-            <Text style={styles.titleText}>Quais são as suas habilidades</Text>
-            <Text style={styles.smallText}>Selecione uma ou mais opções que você mais se identifica.</Text>
-            <Text style={styles.smallText}>Não se preocupe, você pode alterar essas escolhas depois.</Text>
-          </View>
+export default function PerfilFifthScreen() {
+  return (
+    <View style={styles.background}>
+      <View style={styles.screen}>
+        <View style={styles.space}>
+          <Text style={styles.titleText}>Quais são as suas habilidades</Text>
+          <Text style={styles.smallText}>Selecione uma ou mais opções que você mais se identifica.</Text>
+          <Text style={styles.smallText}>Não se preocupe, você pode alterar essas escolhas depois.</Text>
+        </View>
 
-          <View style={styles.space}>
-            <View style={{ flexDirection: 'column' }}>
-              <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                <TouchableHighlight
-                  style={[styles.box, styles.careerButton]}
-                  underlayColor={'#4460F1'}
-                  onPress={() => console.log('click')}
-                >
-                  <Text style={styles.careerButtonText}>Costura</Text>
-                </TouchableHighlight>
+        <View style={styles.space}>
+          <View style={{ flexDirection: 'column' }}>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+              <TouchableHighlight
+                style={[styles.box, styles.careerButton]}
+                underlayColor={'#4460F1'}
+                onPress={() => console.log('click')}
+              >
+                <Text style={styles.careerButtonText}>Costura</Text>
+              </TouchableHighlight>
 
-                <TouchableHighlight
-                  style={[styles.box, styles.careerButton]}
-                  underlayColor={'#4460F1'}
-                  onPress={() => console.log('click')}
-                >
-                  <Text style={styles.careerButtonText}>Programação</Text>
-                </TouchableHighlight>
-              </View>
+              <TouchableHighlight
+                style={[styles.box, styles.careerButton]}
+                underlayColor={'#4460F1'}
+                onPress={() => console.log('click')}
+              >
+                <Text style={styles.careerButtonText}>Programação</Text>
+              </TouchableHighlight>
+            </View>
 
-              <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                <TouchableHighlight
-                  style={[styles.box, styles.careerButton]}
-                  underlayColor={'#4460F1'}
-                  onPress={() => console.log('click')}
-                >
-                  <Text style={styles.careerButtonText}>Escrita</Text>
-                </TouchableHighlight>
-                <TouchableHighlight
-                  style={[styles.box, styles.careerButton]}
-                  underlayColor={'#4460F1'}
-                  onPress={() => console.log('click')}
-                >
-                  <Text style={styles.careerButtonText}>Venda</Text>
-                </TouchableHighlight>
-              </View>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+              <TouchableHighlight
+                style={[styles.box, styles.careerButton]}
+                underlayColor={'#4460F1'}
+                onPress={() => console.log('click')}
+              >
+                <Text style={styles.careerButtonText}>Escrita</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                style={[styles.box, styles.careerButton]}
+                underlayColor={'#4460F1'}
+                onPress={() => console.log('click')}
+              >
+                <Text style={styles.careerButtonText}>Venda</Text>
+              </TouchableHighlight>
+            </View>
 
-              <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                <TouchableHighlight
-                  style={[styles.box, styles.careerButton]}
-                  underlayColor={'#4460F1'}
-                  onPress={() => console.log('click')}
-                >
-                  <Text style={styles.careerButtonText}>Construção</Text>
-                </TouchableHighlight>
-                <TouchableHighlight
-                  style={[styles.box, styles.careerButton]}
-                  underlayColor={'#4460F1'}
-                  onPress={() => console.log('click')}
-                >
-                  <Text style={styles.careerButtonText}>Conserto</Text>
-                </TouchableHighlight>
-              </View>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+              <TouchableHighlight
+                style={[styles.box, styles.careerButton]}
+                underlayColor={'#4460F1'}
+                onPress={() => console.log('click')}
+              >
+                <Text style={styles.careerButtonText}>Construção</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                style={[styles.box, styles.careerButton]}
+                underlayColor={'#4460F1'}
+                onPress={() => console.log('click')}
+              >
+                <Text style={styles.careerButtonText}>Conserto</Text>
+              </TouchableHighlight>
+            </View>
 
-              <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                <TouchableHighlight
-                  style={[styles.box, styles.careerButton]}
-                  underlayColor={'#4460F1'}
-                  onPress={() => console.log('click')}
-                >
-                  <Text style={styles.careerButtonText}>Dança</Text>
-                </TouchableHighlight>
-                <TouchableHighlight
-                  style={[styles.box, styles.careerButton]}
-                  underlayColor={'#4460F1'}
-                  onPress={() => console.log('click')}
-                >
-                  <Text style={styles.careerButtonText}>Luta</Text>
-                </TouchableHighlight>
-              </View>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+              <TouchableHighlight
+                style={[styles.box, styles.careerButton]}
+                underlayColor={'#4460F1'}
+                onPress={() => console.log('click')}
+              >
+                <Text style={styles.careerButtonText}>Dança</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                style={[styles.box, styles.careerButton]}
+                underlayColor={'#4460F1'}
+                onPress={() => console.log('click')}
+              >
+                <Text style={styles.careerButtonText}>Luta</Text>
+              </TouchableHighlight>
+            </View>
 
-              <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                <TouchableHighlight
-                  style={[styles.box, styles.careerButton]}
-                  underlayColor={'#4460F1'}
-                  onPress={() => console.log('click')}
-                >
-                  <Text style={styles.careerButtonText}>Desenho</Text>
-                </TouchableHighlight>
-                <TouchableHighlight
-                  style={[styles.box, styles.careerButton]}
-                  underlayColor={'#4460F1'}
-                  onPress={() => console.log('click')}
-                >
-                  <Text style={styles.careerButtonText}>Ensino</Text>
-                </TouchableHighlight>
-              </View>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+              <TouchableHighlight
+                style={[styles.box, styles.careerButton]}
+                underlayColor={'#4460F1'}
+                onPress={() => console.log('click')}
+              >
+                <Text style={styles.careerButtonText}>Desenho</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                style={[styles.box, styles.careerButton]}
+                underlayColor={'#4460F1'}
+                onPress={() => console.log('click')}
+              >
+                <Text style={styles.careerButtonText}>Ensino</Text>
+              </TouchableHighlight>
+            </View>
 
-              <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                <TouchableHighlight
-                  style={[styles.box, styles.careerButton]}
-                  underlayColor={'#4460F1'}
-                  onPress={() => console.log('click')}
-                >
-                  <Text style={styles.careerButtonText}>Fotografia</Text>
-                </TouchableHighlight>
-                <TouchableHighlight
-                  style={[styles.box, styles.careerButton]}
-                  underlayColor={'#4460F1'}
-                  onPress={() => console.log('click')}
-                >
-                  <Text style={styles.careerButtonText}>Plantio</Text>
-                </TouchableHighlight>
-              </View>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+              <TouchableHighlight
+                style={[styles.box, styles.careerButton]}
+                underlayColor={'#4460F1'}
+                onPress={() => console.log('click')}
+              >
+                <Text style={styles.careerButtonText}>Fotografia</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                style={[styles.box, styles.careerButton]}
+                underlayColor={'#4460F1'}
+                onPress={() => console.log('click')}
+              >
+                <Text style={styles.careerButtonText}>Plantio</Text>
+              </TouchableHighlight>
+            </View>
 
-              <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                <TouchableHighlight
-                  style={[styles.box, styles.careerButton]}
-                  underlayColor={'#4460F1'}
-                  onPress={() => console.log('click')}
-                >
-                  <Text style={styles.careerButtonText}>Raciocínio lógico</Text>
-                </TouchableHighlight>
-                <TouchableHighlight
-                  style={[styles.box, styles.careerButton]}
-                  //underlayColor={'#4460F100'}
-                  onPress={() => console.log('click')}
-                >
-                  <Text style={styles.careerButtonText}>Limpeza</Text>
-                </TouchableHighlight>
-              </View>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+              <TouchableHighlight
+                style={[styles.box, styles.careerButton]}
+                underlayColor={'#4460F1'}
+                onPress={() => console.log('click')}
+              >
+                <Text style={styles.careerButtonText}>Raciocínio lógico</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                style={[styles.box, styles.careerButton]}
+                //underlayColor={'#4460F100'}
+                onPress={() => console.log('click')}
+              >
+                <Text style={styles.careerButtonText}>Limpeza</Text>
+              </TouchableHighlight>
             </View>
           </View>
+        </View>
 
-          <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-            <TouchableHighlight
-              style={styles.backButton}
-              underlayColor={'#4460F1'}
-              onPress={() => console.log('click')}
-            >
-              <Text style={styles.backButtonText}>Voltar</Text>
-            </TouchableHighlight>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+          <TouchableHighlight
+            style={styles.backButton}
+            underlayColor={'#4460F1'}
+            onPress={() => console.log('click')}
+          >
+            <Text style={styles.backButtonText}>Voltar</Text>
+          </TouchableHighlight>
 
-            <TouchableHighlight
-              style={styles.nextButton}
-              underlayColor={'#4460F1'}
-              onPress={() => console.log('click')}
-            >
-              <Text style={styles.continueButtonText}>Continuar</Text>
-            </TouchableHighlight>
-          </View>
-
-          <View style={{ alignSelf: 'center' }}>
-            <Text>Carrossel</Text>
-          </View>
-
+          <TouchableHighlight
+            style={styles.nextButton}
+            underlayColor={'#4460F1'}
+            onPress={() => console.log('click')}
+          >
+            <Text style={styles.continueButtonText}>Continuar</Text>
+          </TouchableHighlight>
         </View>
       </View>
-    );
-  }
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -171,7 +164,7 @@ const styles = StyleSheet.create({
   },
   screen: {
     flexDirection: 'column',
-    marginTop: '20%',
+    marginTop: '10%',
     marginHorizontal: '11%'
   },
   space: {
