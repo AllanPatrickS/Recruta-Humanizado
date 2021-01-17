@@ -1,24 +1,52 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, TouchableHighlight, Text, StyleSheet } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default class FirstScreen extends Component {
   render() {
     return (
       <View style={styles.footer}>
-        <View style={styles.footerAlign}>
-          <View style={styles.logo}></View>
-          <Text>Oportunidades</Text>
-        </View>
+        <TouchableHighlight
+          underlayColor={'#ffffff'}
+          onPress={() => console.log('click')}
+        >
+          <View style={styles.footerAlign}>
+            <Icon
+              name="explore"
+              size={30}
+              color="#204559"
+            />
+            <Text style={styles.text}>Oportunidades</Text>
+          </View>
+        </TouchableHighlight>
 
-        <View style={styles.footerAlign}>
-          <View style={styles.logo}></View>
-          <Text>Inscrições</Text>
-        </View>
+        <TouchableHighlight
+          underlayColor={'#ffffff'}
+          onPress={() => console.log('click')}
+        >
+          <View style={styles.footerAlign}>
+          <Icon
+              name="work"
+              size={30}
+              color="#204559"
+            />
+            <Text style={styles.text}>Inscrições</Text>
+          </View>
+        </TouchableHighlight>
 
-        <View style={styles.footerAlign}>
-          <View style={styles.logo}></View>
-          <Text>Perfil</Text>
-        </View>
+        <TouchableHighlight
+          underlayColor={'#ffffff'}
+          onPress={() => console.log('click')}
+        >
+          <View style={styles.footerAlign}>
+          <Icon
+              name="perm-identity"
+              size={30}
+              color="#204559"
+            />
+            <Text style={styles.text}>Perfil</Text>
+          </View>
+        </TouchableHighlight>
       </View>
     );
   }
@@ -27,18 +55,17 @@ export default class FirstScreen extends Component {
 const styles = StyleSheet.create({
   footer: {
     paddingHorizontal: '10%',
-    backgroundColor: 'grey',
+    //backgroundColor: 'grey',
     flexDirection: 'row',
     justifyContent: 'space-between'
   },
   footerAlign: {
-    width: '33%',
+    width: 100,
     alignItems: 'center'
   },
-  logo: {
-    height: 50,
-    width: 50,
-    backgroundColor: 'blue',
-    marginBottom: '5%'
-  },
+  text: {
+    color: '#204559',
+    fontSize: 13,
+    textAlign: 'center',
+  }
 })

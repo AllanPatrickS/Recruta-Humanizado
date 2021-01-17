@@ -13,7 +13,7 @@ export default class FirstScreen extends Component {
         <View style={styles.screen}>
           <Header />
 
-          <Subscription />
+          <Perfil />
         </View>
 
         <Footer />

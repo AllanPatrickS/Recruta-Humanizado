@@ -6,4 +6,8 @@ Botão com drop shadow de 3px no eixo Y
 Raio das bordas do botão: 9px
 
 lupa = search
-3 pontos verticais = more_vert
+3 pontos verticais = more-vert
+compasso = explore
+maleta = work
+perfil = perm-identity
+lápis = edit
