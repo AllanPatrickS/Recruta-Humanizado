@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, TextInput, TouchableHighlight } from 'react-nat
 import DateTimePicker from '@react-native-community/datetimepicker';
 
 export default function PerfilFirstScreen() {
+  const [show, setShow] = useState(true);
   const [date, setDate] = useState(new Date());
   const [name, setName] = useState('');
   const [birth, setBirth] = useState('');
@@ -21,28 +22,34 @@ export default function PerfilFirstScreen() {
         />
 
         <Text style={styles.titleText}>Data de nascimento</Text>
-        <TextInput
-          style={[styles.box, { marginBottom: '5%' }]}
-          placeholder={'Dia/Mês/Ano'}
-          placeholderTextColor='#4460F1'
-          value={birth}
-          editable={false}
-        />
+        <TouchableHighlight
+          underlayColor={'#ffffff'}
+          onPress={() => console.log('click')}
+        >
+          <TextInput
+            style={[styles.box, { marginBottom: '5%' }]}
+            placeholder={'Dia/Mês/Ano'}
+            placeholderTextColor='#4460F1'
+            value={birth}
+            editable={false}
+          />
+        </TouchableHighlight>
+        
         {show && (
           <DateTimePicker
             testID="dateTimePicker"
             value={date}
-            mode={mode}
+            mode={'date'}
             is24Hour={true}
             display="default"
-            onChange={onChange}
+          //onChange={onChange}
           />
         )}
 
         <Text style={styles.titleText}>Gênero*</Text>
         <TextInput
           style={[styles.box, { marginBottom: '5%' }]}
-          placeholder={'Dia/Mês/Ano'}
+          placeholder={'Dia/Mês'}
           placeholderTextColor='#4460F1'
         />
 
