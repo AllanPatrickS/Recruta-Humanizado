@@ -14,11 +14,11 @@ export default function FirstScreen({ navigation }) {
 
   const emailHasErrors = () => {
     let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    return reg.test(email) == true;
+    return reg.test(email) == false;
   }
 
   const passwordHasErrors = () => {
-    return password.length > 7;
+    return password.length < 8;
   }
 
 
@@ -37,7 +37,7 @@ export default function FirstScreen({ navigation }) {
           onChangeText={text => setEmail(text)}
           vaule={email}
         />
-        <HelperText type="error" visible={emailHasErrors && email.length !== 0}>
+        <HelperText type="error" visible={emailHasErrors() && email.length !== 0}>
           Email inválido!
         </HelperText>
 
@@ -48,7 +48,7 @@ export default function FirstScreen({ navigation }) {
           onChangeText={text => setPassword(text)}
           value={password}
         />
-        <HelperText type="error" visible={passwordHasErrors && password.length !== 0}>
+        <HelperText type="error" visible={passwordHasErrors() && password.length !== 0}>
           A senha precisa ter pelo menos 8 dígitos!
         </HelperText>
 
