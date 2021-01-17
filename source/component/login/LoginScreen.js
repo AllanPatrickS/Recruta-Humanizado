@@ -70,7 +70,7 @@ export default function FirstScreen({ navigation }) {
           >
             <Image
               style={styles.social}
-              source={require('../assets/google.png')} />
+              source={require('../../assets/google.png')} />
           </TouchableHighlight>
           <TouchableHighlight
             style={styles.optionsBox}
@@ -79,7 +79,7 @@ export default function FirstScreen({ navigation }) {
           >
             <Image
               style={styles.social}
-              source={require('../assets/facebook.png')} />
+              source={require('../../assets/facebook.png')} />
           </TouchableHighlight>
           <TouchableHighlight
             style={styles.optionsBox}
@@ -88,7 +88,7 @@ export default function FirstScreen({ navigation }) {
           >
             <Image
               style={styles.social}
-              source={require('../assets/apple.png')} />
+              source={require('../../assets/apple.png')} />
           </TouchableHighlight>
         </View>
       </View>
