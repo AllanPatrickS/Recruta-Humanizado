@@ -7,14 +7,14 @@ import LoginScreen from './login/LoginScreen'
 import LoadingScreen from './login/LoadingScreen'
 import PerfilScreen from './perfil/PerfilScreen'
 import ConclusionScreen from './perfil/ConclusionScreen'
-import MainScreen from './main/MainScreen'
+import MainScreen from './Main/MainScreen'
 
 const Stack = createStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='PerfilScreen' headerMode='none'>
+      <Stack.Navigator initialRouteName='LoginScreen' headerMode='none'>
         <Stack.Screen name='LoginScreen' component={LoginScreen} />
         <Stack.Screen name='LoadingScreen' component={LoadingScreen} />
         <Stack.Screen name='PerfilScreen' component={PerfilScreen} />

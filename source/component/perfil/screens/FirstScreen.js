@@ -2,11 +2,19 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableHighlight } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
-export default function PerfilFirstScreen() {
-  const [show, setShow] = useState(true);
+export default function PerfilFirstScreen({carRef}) {
+  const [show, setShow] = useState(false);
   const [date, setDate] = useState(new Date());
+  const [dateShow, setDateShow] = useState('');
   const [name, setName] = useState('');
-  const [birth, setBirth] = useState('');
+
+  const dateChange = (_, selectedDate) => {
+    const currentDate = selectedDate || date;
+    setShow(false);
+    setDate(selectedDate);
+    setDateShow(selectedDate.toLocaleDateString())
+    console.log(selectedDate.toLocaleDateString())
+  };
 
   return (
     <View style={styles.background} >
@@ -24,17 +32,17 @@ export default function PerfilFirstScreen() {
         <Text style={styles.titleText}>Data de nascimento</Text>
         <TouchableHighlight
           underlayColor={'#ffffff'}
-          onPress={() => console.log('click')}
+          onPress={() => setShow(true)}
         >
           <TextInput
             style={[styles.box, { marginBottom: '5%' }]}
             placeholder={'Dia/Mês/Ano'}
             placeholderTextColor='#4460F1'
-            value={birth}
+            value={dateShow}
             editable={false}
           />
         </TouchableHighlight>
-        
+
         {show && (
           <DateTimePicker
             testID="dateTimePicker"
@@ -42,7 +50,7 @@ export default function PerfilFirstScreen() {
             mode={'date'}
             is24Hour={true}
             display="default"
-          //onChange={onChange}
+            onChange={dateChange}
           />
         )}
 
@@ -65,7 +73,7 @@ export default function PerfilFirstScreen() {
         <TouchableHighlight
           style={styles.nextButton}
           underlayColor={'#4460F1'}
-          onPress={() => console.log('click')}
+          onPress={() => carRef.current.snapToNext()}
         >
           <Text style={styles.nextButtonText}>Continuar</Text>
         </TouchableHighlight>
