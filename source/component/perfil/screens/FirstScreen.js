@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableHighlight } from 'react-native';
+import DateTimePicker from '@react-native-community/datetimepicker';
 
 export default function PerfilFirstScreen() {
   const [date, setDate] = useState(new Date());
@@ -27,6 +28,16 @@ export default function PerfilFirstScreen() {
           value={birth}
           editable={false}
         />
+        {show && (
+          <DateTimePicker
+            testID="dateTimePicker"
+            value={date}
+            mode={mode}
+            is24Hour={true}
+            display="default"
+            onChange={onChange}
+          />
+        )}
 
         <Text style={styles.titleText}>Gênero*</Text>
         <TextInput
