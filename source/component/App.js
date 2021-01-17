@@ -18,7 +18,7 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='PerfilConclusionScreen' headerMode='none'>
+      <Stack.Navigator initialRouteName='LoginScreen' headerMode='none'>
         <Stack.Screen name='LoginScreen' component={LoginScreen} />
         <Stack.Screen name='LoadingScreen' component={LoadingScreen} />
         <Stack.Screen name='PerfilFirstScreen' component={PerfilFirstScreen} />
