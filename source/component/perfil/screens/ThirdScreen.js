@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableHighlight } from 'react-native';
 
-export default function PerfilThirdScreen() {
+export default function ThirdScreen() {
     return (
       <View style={styles.background}>
         <View style={styles.screen}>

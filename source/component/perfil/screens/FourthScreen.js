@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableHighlight } from 'react-native';
 
-export default function PerfilFourthScreen() {
+export default function FourthScreen() {
   return (
     <View style={styles.background}>
       <View style={styles.screen}>

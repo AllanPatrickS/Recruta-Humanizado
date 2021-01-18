@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableHighlight } from 'react-native';
 
-export default function PerfilFifthScreen() {
+export default function FifthScreen() {
   return (
     <View style={styles.background}>
       <View style={styles.screen}>

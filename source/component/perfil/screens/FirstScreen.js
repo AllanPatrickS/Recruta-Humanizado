@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, TouchableHighlight } from 'react-native';
+import { View, Text, StyleSheet, TouchableHighlight, TextInput } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { Picker } from '@react-native-picker/picker';
-import { HelperText, TextInput } from 'react-native-paper';
+import { HelperText } from 'react-native-paper';
 
-export default function PerfilFirstScreen({ carRef }) {
+export default function FirstScreen({ carRef }) {
   const [genreSelected, setGenreSelected] = useState('');
   const [genres] = useState(['Feminino', 'Masculino', 'Outro']);
   const [genresList, setGenresList] = useState([]);
@@ -26,9 +26,16 @@ export default function PerfilFirstScreen({ carRef }) {
   };
 
   const proceed = () => {
-    if (name.length == 0 || dateShow.length == 0) {
-      setDateError(true);
+    if (name.length == 0) {
       setNameError(true);
+      if(dateShow.length > 0) {
+        setDateError(false);
+      }
+    } else if (dateShow.length == 0) {
+      setDateError(true);
+      if(name.length > 0) {
+        setNameError(false);
+      }
     } else {
       carRef.current.snapToNext()
     }
@@ -36,14 +43,14 @@ export default function PerfilFirstScreen({ carRef }) {
 
   const setGenres = () => {
     genres.forEach((item, _) => {
-      genresList.push(<Picker.Item label={item} value={item} key={item}/>)
+      genresList.push(<Picker.Item label={item} value={item} key={item} />)
     })
     setGenresList(genresList);
   }
 
   const setIdents = () => {
     idents.forEach((item, _) => {
-      identsList.push(<Picker.Item label={item} value={item} key={item}/>)
+      identsList.push(<Picker.Item label={item} value={item} key={item} />)
     })
     SetIdentList(identsList)
   }
@@ -179,9 +186,6 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
     elevation: 3,
     marginBottom: '5%'
-  },
-  item: {
-    color: '#4460F1',
   },
   bottomText: {
     color: '#204559',
